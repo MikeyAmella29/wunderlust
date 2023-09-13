@@ -45,12 +45,12 @@
                 <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
                 </svg>
 
-                <a href=”#”>Search for flights</a>
-
+                <a href=”#” title="Search for flights">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <polyline points="9 6 15 12 9 18" />
                 </svg>
+                </a>
             </section>
 
             <section>
@@ -198,17 +198,19 @@
     </main>
 
     <aside>
+        <h2>Contact Us</h2>
         <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
-        Contact Us
-        First Name (Enter first name)
-        Last Name (Enter last name)
+            <label for="firstName">First Name (Enter first name)</label>
+            <input id="firstName" type="text" autocomplete="name" required>
 
-        Contact Method (Email, Text, Phone)
-        Email Address (Enter Email)
-        Phone Number (Enter telephone number)
+            Last Name (Enter last name)
 
-        Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-        Travel Time (Fall, Winter, Spring, Summer, Flexible)
+            Contact Method (Email, Text, Phone)
+            Email Address (Enter Email)
+            Phone Number (Enter telephone number)
+
+            Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
+            Travel Time (Fall, Winter, Spring, Summer, Flexible)
         </form>
     </aside>
 
