@@ -208,17 +208,50 @@
     <aside>
         <h2>Contact Us</h2>
         <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
-            <label for="firstName">First Name (Enter first name)</label>
-            <input id="firstName" type="text" autocomplete="name" required>
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" autocomplete="name" placeholder="Enter first name" required>
 
-            Last Name (Enter last name)
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" autocomplete="name" placeholder="Enter Last Name" required>
 
-            Contact Method (Email, Text, Phone)
-            Email Address (Enter Email)
-            Phone Number (Enter telephone number)
+            <fieldset>
+                <legend>Contact Method *</legend>
+                <input id="prefPhone" type="radio" name="prefPhone" value="prefPhone">
+                <label for="prefPhone">Phone</label>
+                <input id="prefEmail" type="radio" name="prefEmail" value="prefEmail">
+                <label for="prefEmail">Email</label>
+                <input id="prefText" type="radio" name="prefText" value="prefText">
+                <label for="prefText">Text</label>
+            </fieldset>
 
-            Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-            Travel Time (Fall, Winter, Spring, Summer, Flexible)
+            <label for="email">Email Address *</label>
+			<input id="email" type="email" autocomplete="email" placeholder="Enter Email" required>
+
+            <label for="phone">Phone Number *</label>
+			<input id="phone" type="tel" autocomplete="tel" placeholder="Enter telephone number" required>
+
+            <label for="destination">Destination</label>
+            <select id="destination" name="destination">
+                <option>Please select a destination</option>
+                <option>Barcelona</option>
+                <option>Granada</option>
+                <option>Ibiza</option>
+                <option>Madrid</option>
+                <option>Majorca</option>
+                <option>Seville</option>
+                <option>Tenerife</option>
+                <option>Valencia</option>
+            </select>
+
+            <label for="travelTime">Travel Time</label>
+            <select id="travelTime" name="travelTime">
+                <option>Please select a preferred travel time</option>
+                <option>Fall</option>
+                <option>Winter</option>
+                <option>Spring</option>
+                <option>Summer</option>
+                <option>Flexible</option>
+            </select>
         </form>
     </aside>
 
