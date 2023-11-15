@@ -61,17 +61,33 @@ table {
 }
 
     html {
-        /* min-width: 320px; */
+        margin: 0 auto;
     }
 
     body{
-        /* min-width: 320px; */
+        
     }
 
     header {
-        display: flex;
-        /* display: grid;
-        grid-template-columns: 1fr; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background: linear-gradient(to bottom, var(--teal), var(--white));
+    }
+
+    #logo {
+        grid-column: 1/2;
+    }
+
+    nav {
+        grid-column: 2/3;
+        text-align: right;
+        position: relative;
+        bottom: 50px;
+    }
+
+    h1, p {
+        grid-column: 1;
     }
 
     main {
@@ -79,21 +95,51 @@ table {
         grid-template-columns: 1fr;
     }
 
+    h1 {
+        font-size: 2em;
+        font-family: Molle, arial, sans-serif;
+    }
+
+    #intro{
+        background: linear-gradient(to bottom, var(--white), var(--light-gray));
+    }
+
     #intro h2 {
         font-family: Molle, arial, sans-serif;
+        font-size: 2em;
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: .5em;
     }
 
     #intro p {
         font-family: Montserrat, arial, sans-serif;
         margin-left: 20px;
         margin-right: 20px;
+        padding-bottom: 1em;
     } 
 
     #plan {
         background-color: var(--yellow);
         text-align: center;
+    }
+
+    h3 {
+        font-family: Molle, arial, sans-serif;
+        font-size: 3em;
+        text-align: left;
+        padding-left: .5em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+
+    }
+
+    #plan h4 {
+        font-family: Montserrat, arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 
     #plan div {
@@ -112,12 +158,39 @@ table {
         margin: 10px;
         background-color: var(--teal);
         color: var(--black);
-        stroke: var(--white);
+        border: 5px solid var(--white);
         border-radius: 20px;
     }
 
     #testimonials {
         text-align: center;
+    }
+
+    #testimonials h4 {
+        font-family: Montserrat, arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 2em;
+        padding-top: .25em;
+        padding-bottom: .25em;
+    }
+
+    #testimonials p {
+        font-family: Montserrat, arial, sans-serif;
+        font-size: 1em;
+        padding-top: .25em;
+        padding-bottom: .25em;
+    }
+
+    #testimonials q {
+        font-family: Montserrat, arial, sans-serif;
+        font-size: 1em;
+        font-style: italic;
+        padding-top: .25em;
+    }
+
+    #testimonials section {
+        padding-bottom: 1em;
     }
 
     #about {
@@ -127,6 +200,8 @@ table {
     #about div {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        padding-bottom: 2em;
     }
 
     #about section {
