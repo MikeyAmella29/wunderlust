@@ -373,7 +373,6 @@ footer p, footer a {
         margin-left: 50px;
         margin-right: 50px;
         padding-bottom: .5em;
-        /* max-width: 320px; */
     }
 
     #intro {
@@ -518,6 +517,8 @@ footer p, footer a {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: .5em;
+
+        margin: 1em;
     }
     
     #img-grid img {
