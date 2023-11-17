@@ -388,8 +388,8 @@ footer p, footer a {
     }
 
     nav ul{   
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     nav a {
@@ -475,4 +475,80 @@ footer p, footer a {
         padding-bottom: 2em;
     }
     
+}
+@media (min-width: 721px) {
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+    }
+
+    #logo {
+        grid-column: 1/2;
+    }
+    
+    h1{
+        grid-column: 2/3;
+        margin-top: 0em;
+        margin-left: 20px;
+        padding-bottom: .5em;
+        grid-row: 1;
+    }
+    
+    header p {
+        font-size: 1.5em;
+        grid-column: 2/3;
+        margin-top: 5em;
+        margin-left: 20px;
+        margin-right: 40px;
+        padding-bottom: 1em; 
+        grid-row: 1;       
+    }
+
+    nav {
+        grid-column: 3/4;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    nav ul{   
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    nav a {
+        background-color: var(--white);
+        padding: 1em;
+    }
+
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #intro h2 {
+        grid-column: 1/2;
+    }
+
+    #intro p {
+        grid-column: 1/2;
+    }
+
+    #intro div {
+        grid-column: 2/3;
+    }
+
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #testimonials div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #about div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
