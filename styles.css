@@ -68,7 +68,7 @@ table {
     height: auto;
 }
 
-.sr-only, label {
+.sr-only {
     position:absolute;
     left:-10000px;
     top:auto;
@@ -261,9 +261,10 @@ h3 {
 }
 
 #contact label {
+    font-family: Montserrat, arial, sans-serif;
     display: block;
     margin-bottom: 8px;
-    color: var(--purple);
+    color: var(--black);
 }
 
 #contact input,
@@ -475,6 +476,8 @@ footer p, footer a {
     }
 
     nav {
+        position: relative;
+        bottom: 5.75em;
         grid-column: 3/4;
         grid-row: 1;
         text-align: right;
@@ -518,7 +521,7 @@ footer p, footer a {
         grid-template-columns: 1fr 1fr;
         gap: .5em;
 
-        margin: 1em;
+        margin: 2em;
     }
     
     #img-grid img {
@@ -529,10 +532,24 @@ footer p, footer a {
         grid-column: span 2;
     }
 
+    #plan {
+        padding-bottom: 2em;
+    }
+
 
     #plan div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 5em;
+    }
+
+    #plan section {
+        width: 200px;
+    }
+
+    #plan img {
+        width: 70%;
+        height: auto;
     }
 
     #testimonials div {
@@ -543,5 +560,14 @@ footer p, footer a {
     #about div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #testimonials div {
+        margin: 5em;
+    }
+
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
