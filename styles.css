@@ -89,8 +89,7 @@ header {
 }
 
 #logo img {
-    background-color: transparent;
-    /* not working */
+    width: 150px;
 }
 
 nav {
@@ -102,6 +101,18 @@ nav {
 
 nav a {
     text-decoration: none;
+}
+
+#menu-toggle label{
+    background-color: var(--yellow);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#menu-toggle ul{
+    display: none;
 }
 
 h1{
@@ -361,6 +372,15 @@ footer p, footer a {
     nav a {
         background-color: var(--white);
         padding: 1em;
+    }
+
+    #menu-toggle label{
+        display: none;
+    }
+    
+    #menu-toggle ul{
+        /* display: show; stopped here */
+        /* testing binary change? */
     }
 
     .active a {
