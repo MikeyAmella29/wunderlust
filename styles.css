@@ -103,18 +103,6 @@ nav a {
     text-decoration: none;
 }
 
-#menu-toggle label{
-    background-color: var(--yellow);
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-#menu-toggle ul{
-    display: none;
-}
-
 h1{
     grid-column: 1;
     margin-top: 1.5em;
@@ -310,6 +298,72 @@ footer p, footer a {
     margin-bottom: 10px;
 }
 
+@media (max-width: 320px){
+    /* mobile nav styles */
+
+    #menu-toggle{
+        text-align: center;
+    }
+
+    #toggle:not(:checked) + label{
+        background-color: var(--yellow);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 3em;
+        padding-right: 2em;
+    }
+
+    #toggle:checked + label{
+        background-color: var(--black);
+        color: var(--white);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+
+        position: absolute;
+        width: 100%;
+        margin-top: 1.5em;
+        list-style-type: none;
+        left: 500px;
+    }
+
+    nav li {
+        background-color: var(--teal);
+        color: var(--black);
+        border-bottom: 2px solid var(--black);
+    }
+
+    nav li a {
+        border-radius: 1px solid var(--black);
+        display: block;
+        padding: 1.5em;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    #menu-toggle input:not(:checked) ~ ul {
+        display: none;
+    }
+
+    #menu-toggle input:checked ~ ul {
+        left: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+
+}
+
 @media (min-width: 321px) and (max-width: 720px){
 
     header{
@@ -376,11 +430,6 @@ footer p, footer a {
 
     #menu-toggle label{
         display: none;
-    }
-    
-    #menu-toggle ul{
-        /* display: show; stopped here */
-        /* testing binary change? */
     }
 
     .active a {
@@ -503,6 +552,10 @@ footer p, footer a {
         text-align: right;
     }
 
+    nav input {
+        display: hidden;
+    }
+
     nav ul{   
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -511,6 +564,15 @@ footer p, footer a {
     nav a {
         background-color: var(--white);
         padding: 1em;
+    }
+
+    #menu-toggle input{
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
     }
 
     .active a {
