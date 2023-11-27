@@ -222,6 +222,8 @@ h3 {
     font-size: 1em;
     font-style: italic;
     padding-top: .25em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 #testimonials section {
@@ -337,6 +339,7 @@ input[type="radio"]::before {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1em;
+    border: none;
     width: 100%;
     height: 4em;
     background-color: var(--purple);
@@ -586,6 +589,11 @@ footer p, footer a {
         gap: .25em;
         padding-bottom: 2em;
     }
+
+    fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     
 }
 @media (min-width: 721px) {
@@ -633,9 +641,14 @@ footer p, footer a {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    nav li {
+        min-width: 135px;
+    }
+
     nav a {
         background-color: var(--white);
         padding: 1em;
+        min-width: 135px;
     }
 
     #menu-toggle input{
@@ -694,11 +707,10 @@ footer p, footer a {
     #plan div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 5em;
     }
 
     #plan section {
-        width: 200px;
+        width: 250px;
     }
 
     #plan img {
@@ -709,6 +721,16 @@ footer p, footer a {
     #testimonials div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2em;
+        margin: 5em;
+    }
+
+    #testimonials section{
+        gap: 2em;
+    }
+
+    #testimonials h4 {
+        font-size: 1em;
     }
 
     #about div {
@@ -716,12 +738,25 @@ footer p, footer a {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    #testimonials div {
-        margin: 5em;
-    }
-
     #contact form {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: .5em;
+    }
+
+    fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: .75em;
+    }
+
+    #mySubmit{
+        font-weight: normal;
+        width: 200px;
+        height: 50px;
+        border: none;
+        
+        position: relative;
+        left: 11em;
     }
 }
