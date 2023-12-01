@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-7,48.3,205,-160,369,41,701,-270,618,447,576;8..144,0,100,100,0,468,79,750,-203,738,514,712;8..144,0,100,200,0,468,79,750,-203,738,514,712;8..144,0,100,300,0,468,79,750,-203,738,514,712;8..144,0,100,400,0,468,79,750,-203,738,514,712;8..144,0,100,500,0,468,79,750,-203,738,514,712;8..144,0,100,600,0,468,79,750,-203,738,514,712;8..144,0,100,700,0,468,79,750,-203,738,514,712;8..144,0,100,800,0,468,79,750,-203,738,514,712;8..144,0,100,900,0,468,79,750,-203,738,514,712;8..144,0,100,1000,0,468,79,750,-203,738,514,712&display=swap');
+
 /* CSS by Mikey Amella */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -39,8 +41,6 @@ table {
     border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-7,48.3,205,-160,369,41,701,-270,618,447,576;8..144,0,100,100,0,468,79,750,-203,738,514,712;8..144,0,100,200,0,468,79,750,-203,738,514,712;8..144,0,100,300,0,468,79,750,-203,738,514,712;8..144,0,100,400,0,468,79,750,-203,738,514,712;8..144,0,100,500,0,468,79,750,-203,738,514,712;8..144,0,100,600,0,468,79,750,-203,738,514,712;8..144,0,100,700,0,468,79,750,-203,738,514,712;8..144,0,100,800,0,468,79,750,-203,738,514,712;8..144,0,100,900,0,468,79,750,-203,738,514,712;8..144,0,100,1000,0,468,79,750,-203,738,514,712&display=swap');
-
 :root {
     --yellow: #F6D64A;
     --teal: #55BCD5;
@@ -52,7 +52,7 @@ table {
     --black: #000000;
 }
 
-
+/* ------------------------GLOBAL STYLES--------------------- */
 #skip{
     position: absolute;
     left: -10000px;
@@ -77,6 +77,7 @@ table {
     overflow:hidden;
 }
 
+/* ------------------------MOBILE STYLES--------------------- */
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,10 +87,6 @@ header {
 
 #logo {
     grid-column: 1/2;
-}
-
-#logo img {
-    width: 150px;
 }
 
 nav {
@@ -104,10 +101,16 @@ nav a {
 }
 
 h1{
+    font-size: 2em;
+    font-family: Molle, arial, sans-serif;
     grid-column: 1;
     margin-top: 1.5em;
-    margin-left: 20px;
+    padding-left: 20px;
     padding-bottom: .5em;
+}
+
+p {
+    line-height: 2;
 }
 
 header p {
@@ -115,18 +118,13 @@ header p {
     grid-column: 1/3;
     margin-left: 20px;
     margin-right: 20px;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr;
-}
-
-h1 {
-    font-size: 2em;
-    font-family: Molle, arial, sans-serif;
 }
 
 #intro{
@@ -151,6 +149,7 @@ h1 {
 
 #intro img {
     width: 100%;
+    padding-bottom: 1em;
 }
 
 #plan {
@@ -169,14 +168,6 @@ h3 {
 
 }
 
-#plan h4 {
-    font-family: Montserrat, arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
 #plan div {
     display: grid;
     grid-template-columns: 1fr;
@@ -185,7 +176,7 @@ h3 {
 
 #plan section{
     max-width: 300px;
-    min-height: 300px;
+    height: 300px;
     text-align: center;
     justify-content: center;
     margin: 10px;
@@ -195,8 +186,17 @@ h3 {
     border-radius: 20px;
 }
 
+#plan h4 {
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 #testimonials {
     margin: 0 auto;
+    padding-top: 1.5em;
     text-align: center;
     width: 100%;
 }
@@ -222,8 +222,8 @@ h3 {
     font-size: 1em;
     font-style: italic;
     padding-top: .25em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 1em;
+    /* margin-right: 3em; */
 }
 
 #testimonials section {
@@ -240,11 +240,28 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     padding-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+
 }
 
 #about img {
     max-width: 7em;
     max-height: 5em;
+}
+
+#about h4 {
+    font-family: Montserrat, arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 1em;
+    padding-bottom: .5em; 
+}
+
+#about p{
+    font-family: Montserrat, arial, sans-serif;
+    line-height: 1;
 }
 
 #about section {
@@ -253,6 +270,13 @@ h3 {
 
 #contact {
     width: 100%;
+    padding-bottom: 2em;
+}
+
+#contact h3 {
+    padding-top: 1em;
+    padding-bottom: .5em;
+    font-size: 1.75em;
 }
 
 #contact form {
@@ -349,6 +373,13 @@ input[type="radio"]::before {
 
 .required {
     color: var(--purple);
+    
+}
+
+.form-required{
+    font-size: .75em;
+    color: var(--gray);
+    font-family: Montserrat, arial, sans-serif;
 }
 
 input[type="radio"]:checked::before {
@@ -371,9 +402,14 @@ footer p, footer a {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 320px){
+    #logo img {
+        width: 150px;
+    }
+
     /* mobile nav styles */
 
     #menu-toggle{
@@ -385,7 +421,7 @@ footer p, footer a {
         padding-top: 1em;
         padding-bottom: 1em;
         padding-left: 3em;
-        padding-right: 2em;
+        padding-right: 1.5em;
     }
 
     #toggle:checked + label{
@@ -417,7 +453,7 @@ footer p, footer a {
     }
 
     nav li a {
-        border-radius: 1px solid var(--black);
+        border-radius: 1px;
         display: block;
         padding: 1.5em;
         text-decoration: none;
@@ -439,14 +475,21 @@ footer p, footer a {
 
 }
 
+/* -----------------------MED SCREEN STYLES-------------------- */
 @media (min-width: 321px) and (max-width: 720px){
 
     header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 3em;
+    }
+
+    header img {
+        width: 200px;
     }
 
     #logo {
+        width: 3em;
         grid-column: 1/2;
     }
     
@@ -457,9 +500,9 @@ footer p, footer a {
     }
     
     h1{
+        font-size: 3em;
         grid-column: 2/5;
         margin-top: 0em;
-        margin-left: 20px;
         padding-bottom: .5em;
         grid-row: 1;
     }
@@ -501,6 +544,7 @@ footer p, footer a {
     nav a {
         background-color: var(--white);
         padding: 1em;
+        width: 200px;
     }
 
     #menu-toggle label{
@@ -531,6 +575,10 @@ footer p, footer a {
         padding-bottom: 1em;
     } 
 
+    #intro img{
+        padding-bottom: 0;
+    }
+
     #img-grid {
         grid-column: span 2;
         display: grid;
@@ -543,6 +591,15 @@ footer p, footer a {
     
     #img-grid img {
         width: 100%;
+    }
+
+    #img-grid img:nth-child(1) {
+        grid-column: 2/3;
+    }
+
+    #img-grid img:nth-child(2) {
+        grid-row: 1;
+        grid-column: 1/2;
     }
 
     #img-grid picture {
@@ -578,16 +635,35 @@ footer p, footer a {
         grid-template-columns: 1fr 1fr;
     }
 
+    #plan section {
+        max-width: 400px;
+        height: 275px;
+    }
+
+    #plan img {
+        width: 50%;
+    }
+
     #testimonials div {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
+    #about h3 {
+        padding-left: 2em;
+    }
+
     #about div {
+        width: 80%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: .25em;
         padding-bottom: 2em;
+    }
+
+    #contact{
+        margin-bottom: 5em;
     }
 
     fieldset{
@@ -595,11 +671,23 @@ footer p, footer a {
         grid-template-columns: 1fr 1fr 1fr;
     }
     
+    #mySubmit{
+        width: 300px;
+        float: right;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
 }
+
+/* -----------------------LARGE SCREEN STYLES-------------------- */
 @media (min-width: 721px) {
     header{
         display: grid;
         grid-template-columns: 1fr 2fr 3fr;
+        padding-bottom: 5em;
     }
 
     #logo {
@@ -607,19 +695,17 @@ footer p, footer a {
     }
     
     h1{
+        font-size: 3em;
         grid-column: 2/3;
-        margin-top: 0em;
-        margin-left: 20px;
+        margin-top: 1em;
         padding-bottom: .5em;
         grid-row: 1;
     }
     
     header p {
-        font-size: 1.5em;
+        font-size: 1em;
         grid-column: 2/3;
-        margin-top: 5em;
-        margin-left: 20px;
-        margin-right: 40px;
+        margin-top: 8em;
         padding-bottom: 1em; 
         grid-row: 1;       
     }
@@ -630,10 +716,6 @@ footer p, footer a {
         grid-column: 3/4;
         grid-row: 1;
         text-align: right;
-    }
-
-    nav input {
-        display: hidden;
     }
 
     nav ul{   
@@ -668,14 +750,17 @@ footer p, footer a {
     #intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
     }
 
     #intro h2 {
         grid-column: 1/2;
+        margin-left: 2em;
     }
 
     #intro p {
         grid-column: 1/2;
+        margin-left: 4em;
     }
 
     #intro div {
@@ -689,6 +774,7 @@ footer p, footer a {
         gap: .5em;
 
         margin: 2em;
+        margin-right: 4em;
     }
     
     #img-grid img {
@@ -699,23 +785,34 @@ footer p, footer a {
         grid-column: span 2;
     }
 
+    #img-grid img:nth-child(1) {
+        grid-column: 2/3;
+    }
+
+    #img-grid img:nth-child(2) {
+        grid-row: 1;
+        grid-column: 1/2;
+    }
+
     #plan {
+
         padding-bottom: 2em;
     }
 
-
     #plan div {
+        width: 95%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     #plan section {
-        width: 250px;
+        max-width: 400px;
+        height: 250px;
     }
 
     #plan img {
-        width: 70%;
-        height: auto;
+        width: 50%;
     }
 
     #testimonials div {
@@ -733,9 +830,29 @@ footer p, footer a {
         font-size: 1em;
     }
 
+    #testimonials q {
+        text-align: center;
+    }
+
+    #about {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    #about h3 {
+        padding-left: 2em;
+    }
+
     #about div {
+        width: 70%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #contact{
+        width: 85%;
+        margin: 0 auto;
     }
 
     #contact form {
@@ -755,8 +872,14 @@ footer p, footer a {
         width: 200px;
         height: 50px;
         border: none;
-        
-        position: relative;
-        left: 11em;
+        float: right;
     }
+
+    footer {
+        display: grid;
+        grid-template-columns: 5fr 1fr 1fr;
+        text-align: left;
+        padding-left: 5em;
+    }
+
 }
